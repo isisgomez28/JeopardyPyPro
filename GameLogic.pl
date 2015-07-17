@@ -10,7 +10,7 @@ puntuacion(maquina, 0).
 nuevo_jugador(Nombre):- assertz(jugador(Nombre)), assertz(puntuacion(Nombre, 0)).
 
 %% Regla para la Actualizacion de la Puntacion del Jugador.
-actualiza_puntuacion(Jug, PtosNuevos):- number(PtosNuevos), puntuacion(Jug, X), Y is (X + PtosNuevos), retract(puntuacion(Jug, _)), assertz(puntuacion(Jug, Y)).
+actualiza_puntuacion(Jug, PtosNuevos):- number(PtosNuevos), retract(puntuacion(Jug, X)), Y is (X + PtosNuevos), assertz(puntuacion(Jug, Y)).
 
 %% Regla de Limpieza de Memoria.
-borra_memoria():- retractall(jugador(_)), retractall(puntuacion(_, _)).
+borra_memoria():- retractall(puntuacion(_, _)), retractall(jugador(_)).
