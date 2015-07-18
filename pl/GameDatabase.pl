@@ -21,8 +21,6 @@ pregunta(9, "", "", 400).
 pregunta(10, "", "", 500).
 
 % Preguntas
-
-% Respuesta.
 respuesta(1, "Quien es John Williams").
 respuesta(2, "Gonna Fly Now").
 respuesta(3, "Quien es John Legend").
@@ -33,4 +31,32 @@ respuesta(7, "Quien es Will Smith").
 respuesta(8, "Quien es Birdman").
 respuesta(9, "").
 respuesta(10, "").
+
+%% Hechos de Analisis.
+
+% Persona y su Ocupación
+persona_ocupacion("John Williams", "Compositor").
+persona_ocupacion("Patrick Doyle", "Compositor").
+persona_ocupacion("Nicolas Hooper", "Compositor").
+persona_ocupacion("Alexandre Desplat", "Compositor").
+persona_ocupacion("John Legend", "Compositor").
+
+% Trabajos realizados.
+compositor_de("John Williams", "Star Wars Episode I: the Phantom Menace").
+compositor_de("John Williams", "Star Wars Episode II: Attack of the Clones").
+compositor_de("John Williams", "Star Wars Episode III: Revenge of the Sith").
+compositor_de("John Williams", "Star Wars Episode IV: A New Hope").
+compositor_de("John Williams", "Star Wars Episode V: The Empire Strikes Back").
+compositor_de("John Williams", "Star Wars Episode VI - Return of the Jedi").
+compositor_de("John Williams", "Star Wars: Episode VII - The Force Awakens").
+compositor_de("John Williams", "Harry Potter y la Piedra Filosofal").
+compositor_de("John Williams", "Harry Potter y la Camara Secreta").
+compositor_de("John Williams", "Harry Potter y el Prisionero de Azkaban").
+compositor_de("Patrick Doyle", "Harry Potter y el Caliz de Fuego").
+compositor_de("Nicolas Hooper", "Harry Potter y la Orden del Fenix").
+compositor_de("Nicolas Hooper", "Harry Potter y el Misterio del Príncipe").
+compositor_de("Alexandre Desplat", "Harry Potter y las Reliquias de la Muerte - Parte 1").
+compositor_de("Alexandre Desplat", "Harry Potter y las Reliquias de la Muerte - Parte 2").
+compositor_de("John Williams", "Jaws").
+
 
