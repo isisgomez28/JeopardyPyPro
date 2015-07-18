@@ -16,7 +16,6 @@ pregunta(5, "Efecto de sonido de stock usado por primera vez en 1951 en la pelic
 %% Preguntas relacionadas a la categoría de Actores y Hechos.
 pregunta(6, "Es el actor que rechazo interpretar el papel de Neo en la trilogia de Matrix").
 pregunta(7, "Fue el actor que interpreto el personaje de Oscar Schindler en el drama de WWII Schindler's List").
-pregunta().
 
 % Respuesta.
 respuesta(1, "Quien es John Williams").
