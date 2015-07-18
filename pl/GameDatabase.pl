@@ -13,7 +13,7 @@ pregunta(3, "Es el compositor que gano mejor cancion en los Oscar en el 2015", "
 pregunta(4, "Canción utilizada en Inception para despertar a los personajes", "Bandas Sonoras", 400).
 pregunta(5, "Efecto de sonido de stock usado por primera vez en 1951 en la pelicula Distant Drums", "Bandas Sonoras", 500).
 
-%% Preguntas relacionadas a la categoría de Actores y Hechos.
+% Preguntas relacionadas a la categoría de Actores y Hechos.
 pregunta(6, "Es el actor que rechazo interpretar el papel de Neo en la trilogia de Matrix").
 pregunta(7, "Fue el actor que interpreto el personaje de Oscar Schindler en el drama de WWII Schindler's List").
 
