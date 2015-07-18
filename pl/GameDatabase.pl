@@ -102,7 +102,20 @@ cancion("I'm not gonna miss you").
 cancion("Lost Stars").
 
 % Pelicula y Cancion
-cancion_pelicula("", "").
+cancion_pelicula_accion("Gonna Fly Now", "Rocky", "Entrenar").
+cancion_pelicula_accion("Gonna Fly Now", "Rocky II", "Entrenar").
+cancion_pelicula_accion("Gonna Fly Now", "Rocky III", "Entrenar").
+cancion_pelicula_accion("Gonna Fly Now", "Rocky IV", "Entrenar").
+cancion_pelicula_accion("Gonna Fly Now", "Rocky V", "Entrenar").
+cancion_pelicula_accion("Gonna Fly Now", "Rocky VI", "Entrenar").
+cancion_pelicula_accion("Gonna Fly Now", "Rocky - Creed", "Entrenar").
+cancion_pelicula_accion("Rocky`s reward", "Rocky", "Creditos Finales").
+cancion_pelicula_accion("Take you back", "Rocky III", "Caminar cerca de Casa").
+cancion_pelicula_accion("Eye of the Tiguer", "Rocky III", "Preparacion Pelear").
+cancion_pelicula_accion("Burning heart", "Rocky IV", "Conflictos de Peleas").
+cancion_pelicula_accion("Heart on fire", "Rocky IV", "Preparacion Boxeadores").
+cancion_pelicula_accion("No easy way out", "Rocky IV", "Conducir").
+cancion_pelicula_accion("Non Je Ne Regrette Rien", "Inception", "Despertar").
 
 % Trabajos realizados.
 compositor_de("John Williams", "Star Wars Episode I: the Phantom Menace").
@@ -126,7 +139,6 @@ compositor_de("Tegan Quin", "Everything is Awesome").
 compositor_de("Rita Ora", "Grateful").
 compositor_de("Glen Campbell", "I'm not gonna miss you").
 compositor_de("Adam Levin", "Lost Stars").
-
 
 % Ganadore(s) de Oscar
 ganador_oscar("Glory", 2015).
