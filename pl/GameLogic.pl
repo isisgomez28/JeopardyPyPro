@@ -14,7 +14,7 @@ actualiza_puntuacion(Jug, PtosNuevos):- number(PtosNuevos), retract(puntuacion(J
 
 %% Ganador
 ganador(Jug1, Jug2, Ganador):- puntuacion(Jug1, X), puntuacion(Jug2, Y), auxiliarGanador(X, Y, Ganador, Jug1, Jug2).
-auxiliarGanador(X, Y, Ganador, Jug1, Jug2) :-  X > Y, Ganador = Jug1 ; X < Y, Ganador = Jug2; X==Y, Ganador = 'Empate'.
+auxiliarGanador(X, Y, Ganador, Jug1, Jug2) :-  X > Y, Ganador = Jug1 ; X < Y, Ganador = Jug2; X==Y, Ganador = "Empate".
 
 %% Regla de Limpieza de Memoria.
 borra_memoria():- retractall(puntuacion(_, _)), retractall(jugador(_)).
