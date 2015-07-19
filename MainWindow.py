@@ -9,6 +9,7 @@
 from PyQt4 import QtCore, QtGui
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
+from Models import *
 
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
@@ -24,20 +25,6 @@ except AttributeError:
     def _translate(context, text, disambig):
         return QtGui.QApplication.translate(context, text, disambig)
 
-
-class CategoryModel(object):
-    def __init__(self, name, startingAmount, increment, questions=[None, None, None, None, None]):
-        self.questions = {}
-        currentAmount = startingAmount
-        for i in range(0, 5):
-            self.questions[currentAmount+(i*increment)] = questions[i]
-
-    def setQuestion(self, amount, question):
-        self.questions[amount] = question
-
-class GameModel(object):
-    def __init__(self):
-        self.categories = [{}]
 
 class Ui_MainWindow(QtGui.QMainWindow):
     def __init__(self):
@@ -92,7 +79,8 @@ class Ui_MainWindow(QtGui.QMainWindow):
             self.categoryWidgets[i]["verticalLayout"].setObjectName(_fromUtf8("verticalLayout"))
             self.categoryWidgets[i]["label"] = QtGui.QLabel(self.categoryWidgets[i]["verticalLayoutWidget"])
             self.categoryWidgets[i]["label"].setObjectName(_fromUtf8("label_"+repr(i)))
-            self.categoryWidgets[i]["label"].setStyleSheet("color: yellow; background-color: blue")
+            self.categoryWidgets[i]["label"].setStyleSheet("color: yellow; background-color: blue;")
+            self.categoryWidgets[i]["label"].setAlignment(Qt.AlignCenter)
             self.categoryWidgets[i]["verticalLayout"].addWidget(self.categoryWidgets[i]["label"])
 
             self.categoryWidgets[i]["spacer"] = QtGui.QSpacerItem(240, 3, QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Minimum)
@@ -163,24 +151,22 @@ class Ui_MainWindow(QtGui.QMainWindow):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(_translate("MainWindow", "Jeoperdy", None))
-        #self.label_2.setText(_translate("MainWindow", "TextLabel", None))
-        #self.label_3.setText(_translate("MainWindow", "TextLabel", None))
-        #self.label_4.setText(_translate("MainWindow", "TextLabel", None))
-        #self.label_5.setText(_translate("MainWindow", "TextLabel", None))
         self.label.setText(_translate("MainWindow", "Computador", None))
         self.label_6.setText(_translate("MainWindow", "Jugador", None))
 
-    def setPrices(self):
-        for i in range(0, 5):
-            for j in range(0, 5):
-                m = j+1 % 5
-                m = m if m else 5
-                self.categoryWidgets[i]["buttons"][j].setText('$' + repr(m) + '00')
+    def setModel(self, gameModel):
+        self.model = gameModel
+        self.setCategories()
 
-    def setCategories(self, categories):
-        if len(categories) != 5:
-            return False
+    def setCategories(self):
+        i = 0
+        for category in self.model.categorias:
+            self.categoryWidgets[i]["label"].setText(category.nombre)
+            self.setQuestions(i)
+            i += 1
 
-        for i in range(0, 5):
-            self.categoryWidgets[i]["label"].setText(categories[i])
+    def setQuestions(self, categoryNum):
+        for k,v in self.model.categorias[categoryNum].preguntas.iteritems():
+            self.categoryWidgets[categoryNum]["buttons"][(k-1)/100].setText('$' + repr(k))
+
 

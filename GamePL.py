@@ -18,9 +18,11 @@ class GamePL(object):
     def getPuntuacion(self, jugador):
         None
 
+    def getCategorias(self):
+        return self.prolog.query('categoria(Categoria, Descripcion)')
+
     def getPreguntas(self):
-        for result in self.prolog.query('pregunta(Numero, Pregunta, Categoria, Puntos)'):
-            print 'Pregunta ' + repr(result['Numero']) + ': ' + result['Pregunta']
+        return self.prolog.query('pregunta(Numero, Pregunta, Categoria, Puntos)')
 
     def getRespuestas(self):
-        None
+        return self.prolog.query('respuesta(Numero, Respuesta)')
