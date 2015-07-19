@@ -10,13 +10,13 @@ categoria("Premios Oscars 2015", "Los ganadores de los Oscars del 2015").
 pregunta(1, "Es un compositor famoso de las peliculas Star Wars, Harry Potter y Jaws", "Bandas Sonoras", 100).
 pregunta(2, "Cancion utilizada por Rocky Balboa en sus entrenamientos en la saga completa", "Bandas Sonoras", 200).
 pregunta(3, "Es el compositor que gano mejor cancion en los Oscar en el 2015", "Bandas Sonoras", 300).
-pregunta(4, "Canción utilizada en Inception para despertar a los personajes", "Bandas Sonoras", 400).
+pregunta(4, "Cancion utilizada en Inception para despertar a los personajes", "Bandas Sonoras", 400).
 pregunta(5, "Efecto de sonido de stock usado por primera vez en 1951 en la pelicula Distant Drums", "Bandas Sonoras", 500).
 
 % Preguntas relacionadas a la categoría de Actores y Hechos Curiosos.
 pregunta(6, "Enfermedad que arruino su carrera de actor a Charlie Sheen", "Actores y Hechos Curiosos", 100).
 pregunta(7, "Es el actor que rechazo interpretar el papel de Neo en la trilogia de Matrix", "Actores y Hechos Curiosos", 200).
-pregunta(8, "Fue el superheroe por el cual Riggan Thomson (Michael Keaton) tuvo delirios durante su vida personal y profesional.", "Actores y Hechos Curiosos" ,300).
+pregunta(8, "Fue el superheroe por el cual Riggan Thomson interpretado por Michael Keaton tuvo delirios durante su vida personal y profesional.", "Actores y Hechos Curiosos" ,300).
 pregunta(9, "Actor que olvido su dialogo con el Guason tras este haber entrado en escena durante una fiesta en Batman: El Caballero de la Noche", "Actores y Hechos Curiosos", 400).
 pregunta(10, "Enfermedad que amenazo la vida del comediante y actor Jim Carrey", "Actores y Hechos Curiosos", 500).
 
@@ -66,7 +66,6 @@ respuesta(24, "Ida").
 respuesta(25, "Alejandro Gonzalez").
 
 %% Hechos de Analisis.
-
 % Persona y su Ocupación
 persona_ocupacion("John Williams", "Compositor").
 persona_ocupacion("Patrick Doyle", "Compositor").
@@ -188,13 +187,16 @@ cancion_pelicula_accion("Gonna Fly Now", "Rocky IV", "Entrenar").
 cancion_pelicula_accion("Gonna Fly Now", "Rocky V", "Entrenar").
 cancion_pelicula_accion("Gonna Fly Now", "Rocky VI", "Entrenar").
 cancion_pelicula_accion("Gonna Fly Now", "Rocky - Creed", "Entrenar").
-cancion_pelicula_accion("Rocky`s reward", "Rocky", "Creditos Finales").
+cancion_pelicula_accion("Rocky's reward", "Rocky", "Creditos Finales").
 cancion_pelicula_accion("Take you back", "Rocky III", "Caminar cerca de Casa").
 cancion_pelicula_accion("Eye of the Tiguer", "Rocky III", "Preparacion Pelear").
 cancion_pelicula_accion("Burning heart", "Rocky IV", "Conflictos de Peleas").
 cancion_pelicula_accion("Heart on fire", "Rocky IV", "Preparacion Boxeadores").
 cancion_pelicula_accion("No easy way out", "Rocky IV", "Conducir").
 cancion_pelicula_accion("Non Je Ne Regrette Rien", "Inception", "Despertar").
+
+% Efecto de sonido utilizado en
+utilizado_en("El grito de Wilhem", "Distant Drums").
 
 % Trabajos realizados.
 compositor_de("John Williams", "Star Wars Episode I: the Phantom Menace").
@@ -203,7 +205,7 @@ compositor_de("John Williams", "Star Wars Episode III: Revenge of the Sith").
 compositor_de("John Williams", "Star Wars Episode IV: A New Hope").
 compositor_de("John Williams", "Star Wars Episode V: The Empire Strikes Back").
 compositor_de("John Williams", "Star Wars Episode VI - Return of the Jedi").
-compositor_de("John Williams", "Star Wars: Episode VII - The Force Awakens").
+compositor_de("John Williams", "Star Wars Episode VII - The Force Awakens").
 compositor_de("John Williams", "Harry Potter y la Piedra Filosofal").
 compositor_de("John Williams", "Harry Potter y la Camara Secreta").
 compositor_de("John Williams", "Harry Potter y el Prisionero de Azkaban").
