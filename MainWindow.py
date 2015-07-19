@@ -172,8 +172,9 @@ class Ui_MainWindow(QtGui.QMainWindow):
             self.categoryWidgets[categoryNum]["buttons"][(k-1)/100].setText('$' + repr(k))
 
     def onQuestionSelected(self, categoryNum, questionNum):
-        questionDialog = QuestionDialog(self)
-        preg = self.model.categorias[categoryNum].preguntas[(questionNum+1)*100]
-        questionDialog.setPregunta(preg)
+        precio = (questionNum+1)*100
+        pregunta = self.model.categorias[categoryNum].preguntas[precio]
+        respuesta = self.model.categorias[categoryNum].respuestas[precio]
+        questionDialog = QuestionDialog(self, pregunta, respuesta)
         questionDialog.exec_()
 
