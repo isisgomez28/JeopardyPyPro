@@ -1,7 +1,7 @@
 %	Categorias
 categoria("Bandas Sonoras", "Musica en las peliculas.").
 categoria("Actores y Hechos Curiosos", "Actores fuera de las peliculas.").
-categoria("Generos","").
+categoria("Peliculas Apocalipticas","Peliculas que han mostrado teorias y pinceladas acerca del fin de la humanidad.").
 categoria("", "").
 categoria("", "").
 
@@ -18,13 +18,13 @@ pregunta(6, "Enfermedad que arruino su carrera de actor a Charlie Sheen", "Actor
 pregunta(7, "Es el actor que rechazo interpretar el papel de Neo en la trilogia de Matrix", "Actores y Hechos Curiosos", 200).
 pregunta(8, "Fue el superheroe por el cual Riggan Thomson (Michael Keaton) tuvo delirios durante su vida personal y profesional.", "Actores y Hechos Curiosos" ,300).
 pregunta(9, "Actor que olvido su dialogo con el Guason tras este haber entrado en escena durante una fiesta en Batman: El Caballero de la Noche", "Actores y Hechos Curiosos", 400).
-pregunta(10, "Enfermedad que amenazo la vida del comediante y actor Jim Carrey", "Actore y Hechos Curiosos", 500).
+pregunta(10, "Enfermedad que amenazo la vida del comediante y actor Jim Carrey", "Actores y Hechos Curiosos", 500).
 
-pregunta(11, "", "", 100).
-pregunta(12, "", "", 200).
-pregunta(13, "", "", 300).
-pregunta(14, "", "", 400).
-pregunta(15, "", "", 500).
+pregunta(11, "Es el director de la pelicula Interestellar", "Peliculas Apocalipticas", 100).
+pregunta(12, "Es la tematica de sociedad ficticia indeseable en sí misma de la pelicula Max Mad", "Peliculas Apocalipticas", 200).
+pregunta(13, "Nombre del villano para el cual trabaja Arnold Schwarzenegger en Terminator", "Peliculas Apocalipticas", 300).
+pregunta(14, "Es el termino relacionado al olvido por completo, pelicula en la que Andrea Riseborough interpreta Vika Olsen", "Peliculas Apocalipticas", 400).
+pregunta(15, "Es el actor que interpreta el personaje de Merovingio en Matrix", "", 500).
 
 pregunta(16, "", "", 100).
 pregunta(17, "", "", 200).
@@ -48,12 +48,12 @@ respuesta(6, "Alcoholismo").
 respuesta(7, "Quien es Will Smith").
 respuesta(8, "Quien es Birdman").
 respuesta(9, "Michael Caine").
-respuesta(10, "").
-respuesta(11, "").
-respuesta(12, "").
-respuesta(13, "").
-respuesta(14, "").
-respuesta(15, "").
+respuesta(10, "Depresion").
+respuesta(11, "Christopher Nolan").
+respuesta(12, "Que es distopia").
+respuesta(13, "Skynet").
+respuesta(14, "Que es Oblivion").
+respuesta(15, "Lambert Wilson").
 respuesta(16, "").
 respuesta(17, "").
 respuesta(18, "").
@@ -79,6 +79,11 @@ persona_ocupacion("Charlie Sheen", "Actor").
 persona_ocupacion("Will Smith", "Actor").
 persona_ocupacion("Michael Keaton", "Actor").
 persona_ocupacion("Michael Caine", "Actor").
+persona_ocupacion("Christopher Nolan", "Director").
+persona_ocupacion("Jim Carrey", "Comediante").
+persona_ocupacion("Jim Carrey", "Actor").
+persona_ocupacion("Arnold Schwarzenegger", "Actor").
+persona_ocupacion("Lambert Wilson", "Actor").
 
 % Enfermedad
 enfermedad("Alcoholismo").
@@ -138,9 +143,10 @@ pelicula("Inception").
 pelicula("Distant Drums").
 pelicula("Batman: El Caballero de la Noche").
 pelicula("Star Wars: The Clone Wars").
-pelicula().
-pelicula().
-pelicula().
+pelicula("Interestellar").
+pelicula("Mad Max").
+pelicula("Terminator").
+pelicula("Oblivion").
 
 cancion("Everything is Awesome").
 cancion("Grateful").
@@ -173,6 +179,9 @@ cancion_pelicula_accion("Heart on fire", "Rocky IV", "Preparacion Boxeadores").
 cancion_pelicula_accion("No easy way out", "Rocky IV", "Conducir").
 cancion_pelicula_accion("Non Je Ne Regrette Rien", "Inception", "Despertar").
 
+% Pelicula y tematica
+pelicula_tematica("Mad Max", "Distopia").
+
 % Trabajos realizados.
 compositor_de("John Williams", "Star Wars Episode I: the Phantom Menace").
 compositor_de("John Williams", "Star Wars Episode II: Attack of the Clones").
@@ -203,9 +212,13 @@ interpretar_en("Michael Keaton", "Riggan Thomson", "Birdman").
 interpretar_en("Michael Keaton", "Bruce Wayne", "Batman").
 interpretar_en("Michael Keaton", "Bruce Wayne", "Batman Returns").
 interpretar_en("Michael Caine", "Alfred", "Batman: El Caballero de la Noche").
+interpretar_en("Arnold Schwarzenegger", "T-800 Modelo 101", "Terminator").
+interpretar_en("Andrea Riseborough", "Vika Olsen", "Oblivion").
+interpretar_en("Lambert Wilson", "Merovingio", "Matrix").
 
 superheroe("Birdman").
 superheroe("Batman").
+villano("Skynet").
 
 % Ganadore(s) de Oscar
 ganador_oscar("Glory", 2015).
