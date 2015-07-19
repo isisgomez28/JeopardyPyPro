@@ -1,7 +1,7 @@
 %	Categorias
 categoria("Bandas Sonoras", "Musica en las peliculas.").
 categoria("Actores y Hechos Curiosos", "Actores fuera de las peliculas.").
-categoria("","").
+categoria("Generos","").
 categoria("", "").
 categoria("", "").
 
@@ -17,8 +17,8 @@ pregunta(5, "Efecto de sonido de stock usado por primera vez en 1951 en la pelic
 pregunta(6, "Enfermedad que arruino su carrera de actor a Charlie Sheen", "Actores y Hechos Curiosos", 100).
 pregunta(7, "Es el actor que rechazo interpretar el papel de Neo en la trilogia de Matrix", "Actores y Hechos Curiosos", 200).
 pregunta(8, "Fue el superheroe por el cual Riggan Thomson (Michael Keaton) tuvo delirios durante su vida personal y profesional.", "Actores y Hechos Curiosos" ,300).
-pregunta(9, "", "", 400).
-pregunta(10, "", "", 500).
+pregunta(9, "Actor que olvido su dialogo con el Guason tras este haber entrado en escena durante una fiesta en Batman: El Caballero de la Noche", "Actores y Hechos Curiosos", 400).
+pregunta(10, "Enfermedad que amenazo la vida del comediante y actor Jim Carrey", "Actore y Hechos Curiosos", 500).
 
 pregunta(11, "", "", 100).
 pregunta(12, "", "", 200).
@@ -47,7 +47,7 @@ respuesta(5, "Que es el El grito de Wilhem").
 respuesta(6, "Alcoholismo").
 respuesta(7, "Quien es Will Smith").
 respuesta(8, "Quien es Birdman").
-respuesta(9, "").
+respuesta(9, "Michael Caine").
 respuesta(10, "").
 respuesta(11, "").
 respuesta(12, "").
@@ -78,12 +78,15 @@ persona_ocupacion("Tegan Quin", "Compositor").
 persona_ocupacion("Charlie Sheen", "Actor").
 persona_ocupacion("Will Smith", "Actor").
 persona_ocupacion("Michael Keaton", "Actor").
+persona_ocupacion("Michael Caine", "Actor").
 
 % Enfermedad
 enfermedad("Alcoholismo").
+enfermedad("Depresion").
 
 % Padece de
 padece_de("Charlie Sheen", "Alcoholismo").
+padece_de("Jim Carrey", "Depresion").
 
 % Pelicula
 pelicula("Star Wars Episode I: The Phantom Menace").
@@ -132,13 +135,12 @@ pelicula("Birdman").
 pelicula("Batman").
 pelicula("Batman Returns").
 pelicula("Inception").
+pelicula("Distant Drums").
+pelicula("Batman: El Caballero de la Noche").
+pelicula("Star Wars: The Clone Wars").
 pelicula().
 pelicula().
 pelicula().
-pelicula().
-pelicula().
-pelicula().
-
 
 cancion("Everything is Awesome").
 cancion("Grateful").
@@ -200,6 +202,7 @@ interpretar_en("Will Smith", "Chris Gardner", "En busca de la felicidad").
 interpretar_en("Michael Keaton", "Riggan Thomson", "Birdman").
 interpretar_en("Michael Keaton", "Bruce Wayne", "Batman").
 interpretar_en("Michael Keaton", "Bruce Wayne", "Batman Returns").
+interpretar_en("Michael Caine", "Alfred", "Batman: El Caballero de la Noche").
 
 superheroe("Birdman").
 superheroe("Batman").
