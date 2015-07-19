@@ -32,11 +32,11 @@ pregunta(18, "Es el actor que interpreta a Oscar Schindler en el dram de WWII Sc
 pregunta(19, "Que pelicula del director Steven Spielberg trata el hecho historico conocido como Septiembre Negro", "Hechos Historicos", 400).
 pregunta(20, "Es un personaje real e historico interpretado por Hugh Jackman como Jean ValJean en Los Miserables", "Hechos Historicos", 500).
 
-pregunta(21, "Actriz ganadora del oscar como Mejor Actriz por su actuacion en Siempre Alice", "Premios Oscars 2015", 100).
+pregunta(21, "Actriz ganadora del Oscar a Mejor Actriz por su actuacion en Siempre Alice", "Premios Oscars 2015", 100).
 pregunta(22, "Pelicula ganadora a Mejor Animacion", "Premios Oscars 2015", 200).
-pregunta(23, "", "Premios Oscars 2015", 300).
-pregunta(24, "", "Premios Oscars 2015", 400).
-pregunta(25, "", "Premios Oscars 2015", 500).
+pregunta(23, "Ambientador de Decoracion de la pelicula El Gran Hotel Budapest recibio el premio a Mejor Diseño de Decoracion", "Premios Oscars 2015", 300).
+pregunta(24, "Es una pelicula dirigida por Pawel Pawlikowski, fue ganadora del Oscar Mejor Pelicula Extranjera", "Premios Oscars 2015", 400).
+pregunta(25, "Cineasta de la Pelicula Birdman", "Premios Oscars 2015", 500).
 
 % Preguntas
 respuesta(1, "Quien es John Williams").
@@ -60,10 +60,10 @@ respuesta(18, "Quien es Liam Neeson").
 respuesta(19, "Munich").
 respuesta(20, "Quien fue Eugene Vidocq").
 respuesta(21, "Julianne Moore").
-respuesta(22, "").
-respuesta(23, "").
-respuesta(24, "").
-respuesta(25, "").
+respuesta(22, "Big Hero 6").
+respuesta(23, "Anna Pinnock").
+respuesta(24, "Ida").
+respuesta(25, "Alejandro Gonzalez").
 
 %% Hechos de Analisis.
 
@@ -90,6 +90,9 @@ persona_ocupacion("Al Pacino", "Actor").
 persona_ocupacion("Liam Neeson", "Actor").
 persona_ocupacion("Andrea Riseborough", "Actriz").
 persona_ocupacion("Julianne Moore", "Actriz").
+persona_ocupacion("Anna Pinnock", "Ambientador de Decoracion").
+persona_ocupacion("Pawel Pawlikowski", "Director").
+persona_ocupacion("Alejandro Gonzalez", "Director").
 
 % Enfermedad
 enfermedad("Alcoholismo").
@@ -159,6 +162,8 @@ pelicula("Schindler's list").
 pelicula("Munich").
 pelicula("You Don't Know Jack").
 pelicula("Big Hero 6").
+pelicula("El Gran Hotel Budapest").
+pelicula("Ida").
 
 cancion("Everything is Awesome").
 cancion("Grateful").
@@ -220,6 +225,8 @@ compositor_de("Adam Levin", "Lost Stars").
 director_de("Christopher Nolan", "Interestellar").
 director_de("Christopher Nolan", "Inception").
 director_de("Steven Spielberg", "Munich").
+director_de("Pawel Pawlikowski", "Ida").
+director_de("Alejandro Gonzalez", "Birdman").
 
 interpretar_en("Will Smith", "Detective Mike Lowrey", "Bad Boys").
 interpretar_en("Will Smith", "Agente J", "Hombres de negro").
@@ -236,6 +243,8 @@ interpretar_en("Liam Neeson", "Oscar Schindler", "Schindler's List").
 interpretar_en("Al Pacino", "Jack Kevorkian", "You Don't Know Jack").
 interpretar_en("Julianne Moore", "Alice Howland", "Siempre Alice").
 
+productor_area_de("Anna Pinnock", "Decoracion", "El Gran Hotel Budapest").
+
 personaje_historico("Eugene Vidocq", "Jean ValJean").
 
 superheroe("Birdman").
@@ -248,3 +257,4 @@ pelicula_animada("Big Hero 6").
 ganador_oscar("Glory", 2015).
 ganador_oscar("Julianne Moore", 2015).
 ganador_oscar("Big Hero 6", 2015).
+ganador_oscar("Anna Pinnock", 2015).
