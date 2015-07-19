@@ -75,6 +75,15 @@ persona_ocupacion("Alexandre Desplat", "Compositor").
 persona_ocupacion("John Legend", "Compositor").
 persona_ocupacion("Rita Ora", "Compositor").
 persona_ocupacion("Tegan Quin", "Compositor").
+persona_ocupacion("Charlie Sheen", "Actor").
+persona_ocupacion("Will Smith", "Actor").
+persona_ocupacion("Michael Keaton", "Actor").
+
+% Enfermedad
+enfermedad("Alcoholismo").
+
+% Padece de
+padece_de("Charlie Sheen", "Alcoholismo").
 
 % Pelicula
 pelicula("Star Wars Episode I: The Phantom Menace").
@@ -94,12 +103,20 @@ pelicula("Harry Potter y las Reliquias de la Muerte - Parte 1").
 pelicula("Harry Potter y las Reliquias de la Muerte - Parte 2").
 pelicula("Jaws").
 
-cancion("Glory").
 cancion("Everything is Awesome").
 cancion("Grateful").
 cancion("Everything is Awesome").
+cancion("Glory").
 cancion("I'm not gonna miss you").
 cancion("Lost Stars").
+
+efecto_sonido("Castle Thunder", 1931).
+efecto_sonido("Howie Scream", 1980).
+efecto_sonido("El grito de Wilhem", 1951).
+efecto_sonido("Deep Note", 1983).
+efecto_sonido("Los rayos blaster", 1977).
+efecto_sonido("El Goofy Holler", 1941).
+efecto_sonido("El timbre de teléfono Universal", 1974).
 
 % Pelicula y Cancion
 cancion_pelicula_accion("Gonna Fly Now", "Rocky", "Entrenar").
@@ -139,6 +156,17 @@ compositor_de("Tegan Quin", "Everything is Awesome").
 compositor_de("Rita Ora", "Grateful").
 compositor_de("Glen Campbell", "I'm not gonna miss you").
 compositor_de("Adam Levin", "Lost Stars").
+
+interpretar_en("Will Smith", "Will", "El Principe de Bel Air").
+interpretar_en("Will Smith", "Detective Mike Lowrey", "Bad Boys").
+interpretar_en("Will Smith", "Agente J", "Hombres de negro").
+interpretar_en("Will Smith", "Chris Gardner", "En busca de la felicidad").
+interpretar_en("Michael Keaton", "Riggan Thomson", "Birdman").
+interpretar_en("Michael Keaton", "Bruce Wayne", "Batman").
+interpretar_en("Michael Keaton", "Bruce Wayne", "Batman Returns").
+
+superheroe("Birdman").
+superheroe("Batman").
 
 % Ganadore(s) de Oscar
 ganador_oscar("Glory", 2015).
