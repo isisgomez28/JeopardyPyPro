@@ -6,7 +6,7 @@ class CategoryModel(object):
         for i in range(0, 5):
             currentAmount = startAmount+(i*increment)
             self.preguntas[currentAmount] = preguntas[i]
-            self.preguntas[currentAmount] = respuestas[i]
+            self.respuestas[currentAmount] = respuestas[i]
 
     def setPregunta(self, cantidad, pregunta):
         self.preguntas[cantidad] = pregunta
