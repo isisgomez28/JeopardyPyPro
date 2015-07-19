@@ -36,7 +36,7 @@ pregunta(21, "Actriz ganadora del Oscar a Mejor Actriz por su actuacion en Siemp
 pregunta(22, "Pelicula ganadora a Mejor Animacion", "Premios Oscars 2015", 200).
 pregunta(23, "Ambientador de Decoracion de la pelicula El Gran Hotel Budapest recibio el premio a Mejor Diseño de Decoracion", "Premios Oscars 2015", 300).
 pregunta(24, "Es una pelicula dirigida por Pawel Pawlikowski, fue ganadora del Oscar Mejor Pelicula Extranjera", "Premios Oscars 2015", 400).
-pregunta(25, "Cineasta de la Pelicula Birdman", "Premios Oscars 2015", 500).
+pregunta(25, "Director de la Pelicula Birdman", "Premios Oscars 2015", 500).
 
 % Preguntas
 respuesta(1, "Quien es John Williams").
@@ -196,9 +196,6 @@ cancion_pelicula_accion("Heart on fire", "Rocky IV", "Preparacion Boxeadores").
 cancion_pelicula_accion("No easy way out", "Rocky IV", "Conducir").
 cancion_pelicula_accion("Non Je Ne Regrette Rien", "Inception", "Despertar").
 
-% Pelicula y tematica
-pelicula_tematica("Mad Max", "Distopia").
-
 % Trabajos realizados.
 compositor_de("John Williams", "Star Wars Episode I: the Phantom Menace").
 compositor_de("John Williams", "Star Wars Episode II: Attack of the Clones").
@@ -252,9 +249,15 @@ superheroe("Batman").
 villano("Skynet").
 
 pelicula_animada("Big Hero 6").
+pelicula_extranjera("Ida").
+
+% Pelicula y tematica
+pelicula_tematica("Mad Max", "Distopia").
 
 % Ganadore(s) de Oscar
 ganador_oscar("Glory", 2015).
 ganador_oscar("Julianne Moore", 2015).
 ganador_oscar("Big Hero 6", 2015).
 ganador_oscar("Anna Pinnock", 2015).
+ganador_oscar("Ida", 2015).
+ganador_oscar("Birdman", 2015).
