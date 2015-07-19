@@ -10,6 +10,7 @@ from PyQt4 import QtCore, QtGui
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from Models import *
+from QuestionDialog import *
 
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
@@ -95,6 +96,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
                 self.categoryWidgets[i]["verticalLayout"].addWidget(self.categoryWidgets[i]["buttons"][j])
 
                 palette = self.categoryWidgets[i]["buttons"][j].setStyleSheet("color: yellow; background-color: blue")
+                self.categoryWidgets[i]["buttons"][j].clicked.connect(lambda i=i, j=j: self.onQuestionSelected(i, j))
 
 
     def setupScoreBoard(self):
@@ -166,7 +168,12 @@ class Ui_MainWindow(QtGui.QMainWindow):
             i += 1
 
     def setQuestions(self, categoryNum):
-        for k,v in self.model.categorias[categoryNum].preguntas.iteritems():
+        for k in self.model.categorias[categoryNum].preguntas:
             self.categoryWidgets[categoryNum]["buttons"][(k-1)/100].setText('$' + repr(k))
 
+    def onQuestionSelected(self, categoryNum, questionNum):
+        questionDialog = QuestionDialog(self)
+        preg = self.model.categorias[categoryNum].preguntas[(questionNum+1)*100]
+        questionDialog.setPregunta(preg)
+        questionDialog.exec_()
 

@@ -19,14 +19,10 @@ if __name__ == "__main__":
 
     for pregunta in preguntas:
         i = int((pregunta["Numero"]-1) / 5)
-        print i
         gameModel.categorias[i].setPregunta(pregunta["Puntos"] , pregunta["Pregunta"])
-
-    print "done"
 
     for respuesta in respuestas:
         i = int((respuesta["Numero"]-1) / 5)
-        print i
         gameModel.categorias[i].setRespuesta((i+1)*100, respuesta["Respuesta"])
 
     ex.setModel(gameModel)

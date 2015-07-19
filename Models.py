@@ -3,10 +3,10 @@ class CategoryModel(object):
         self.nombre = nombre
         self.preguntas = {}
         self.respuestas = {}
-        currentAmount = startAmount
         for i in range(0, 5):
-            self.preguntas[currentAmount+(i*increment)] = preguntas[i]
-            self.preguntas[currentAmount+(i*increment)] = respuestas[i]
+            currentAmount = startAmount+(i*increment)
+            self.preguntas[currentAmount] = preguntas[i]
+            self.preguntas[currentAmount] = respuestas[i]
 
     def setPregunta(self, cantidad, pregunta):
         self.preguntas[cantidad] = pregunta
