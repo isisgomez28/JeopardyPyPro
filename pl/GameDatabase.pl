@@ -24,7 +24,7 @@ pregunta(11, "Es el director de la pelicula Interestellar", "Peliculas Apocalipt
 pregunta(12, "Es la tematica de sociedad ficticia indeseable en sí misma de la pelicula Max Mad", "Peliculas Apocalipticas", 200).
 pregunta(13, "Nombre del villano para el cual trabaja Arnold Schwarzenegger en Terminator", "Peliculas Apocalipticas", 300).
 pregunta(14, "Es el termino relacionado al olvido por completo, pelicula en la que Andrea Riseborough interpreta Vika Olsen", "Peliculas Apocalipticas", 400).
-pregunta(15, "Es el actor que interpreta el personaje de Merovingio en Matrix", "", 500).
+pregunta(15, "Es el actor que interpreta el personaje de Merovingio en Matrix", "Peliculas Apocalipticas", 500).
 
 pregunta(16, "", "", 100).
 pregunta(17, "", "", 200).
