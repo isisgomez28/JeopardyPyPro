@@ -102,6 +102,43 @@ pelicula("Harry Potter y el Misterio del Príncipe").
 pelicula("Harry Potter y las Reliquias de la Muerte - Parte 1").
 pelicula("Harry Potter y las Reliquias de la Muerte - Parte 2").
 pelicula("Jaws").
+pelicula("Star Wars Episode I: the Phantom Menace").
+pelicula("Rocky").
+pelicula("Rocky II").
+pelicula("Rocky III").
+pelicula("Rocky IV").
+pelicula("Rocky V").
+pelicula("Rocky VI").
+pelicula("Rocky - Creed").
+pelicula("Star Wars Episode II: Attack of the Clones").
+pelicula("Star Wars Episode III: Revenge of the Sith").
+pelicula("Star Wars Episode IV: A New Hope").
+pelicula("Star Wars Episode V: The Empire Strikes Back").
+pelicula("Star Wars Episode VI - Return of the Jedi").
+pelicula("Star Wars: Episode VII - The Force Awakens").
+pelicula("Harry Potter y la Piedra Filosofal").
+pelicula("Harry Potter y la Camara Secreta").
+pelicula("Harry Potter y el Prisionero de Azkaban").
+pelicula("Harry Potter y el Caliz de Fuego").
+pelicula("Harry Potter y la Orden del Fenix").
+pelicula("Harry Potter y el Misterio del Príncipe").
+pelicula("Harry Potter y las Reliquias de la Muerte - Parte 1").
+pelicula("Harry Potter y las Reliquias de la Muerte - Parte 2").
+pelicula("Jaws").
+pelicula("Bad Boys").
+pelicula("Hombres de negro").
+pelicula("En busca de la felicidad").
+pelicula("Birdman").
+pelicula("Batman").
+pelicula("Batman Returns").
+pelicula("Inception").
+pelicula().
+pelicula().
+pelicula().
+pelicula().
+pelicula().
+pelicula().
+
 
 cancion("Everything is Awesome").
 cancion("Grateful").
@@ -157,7 +194,6 @@ compositor_de("Rita Ora", "Grateful").
 compositor_de("Glen Campbell", "I'm not gonna miss you").
 compositor_de("Adam Levin", "Lost Stars").
 
-interpretar_en("Will Smith", "Will", "El Principe de Bel Air").
 interpretar_en("Will Smith", "Detective Mike Lowrey", "Bad Boys").
 interpretar_en("Will Smith", "Agente J", "Hombres de negro").
 interpretar_en("Will Smith", "Chris Gardner", "En busca de la felicidad").
