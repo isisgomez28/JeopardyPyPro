@@ -2,8 +2,8 @@
 categoria("Bandas Sonoras", "Musica en las peliculas.").
 categoria("Actores y Hechos Curiosos", "Actores fuera de las peliculas.").
 categoria("Peliculas Apocalipticas","Peliculas que han mostrado teorias y pinceladas acerca del fin de la humanidad.").
-categoria("", "").
-categoria("", "").
+categoria("Hechos Historicos", "Hechos historicos que han invadido la pantalla gigante.").
+categoria("Premios Oscars 2015", "Los ganadores de los Oscars del 2015").
 
 % Preguntas.
 %% Preguntas relacionadas a la categoría de Bandas Sonoras.
@@ -26,17 +26,17 @@ pregunta(13, "Nombre del villano para el cual trabaja Arnold Schwarzenegger en T
 pregunta(14, "Es el termino relacionado al olvido por completo, pelicula en la que Andrea Riseborough interpreta Vika Olsen", "Peliculas Apocalipticas", 400).
 pregunta(15, "Es el actor que interpreta el personaje de Merovingio en Matrix", "Peliculas Apocalipticas", 500).
 
-pregunta(16, "", "", 100).
-pregunta(17, "", "", 200).
-pregunta(18, "", "", 300).
-pregunta(19, "", "", 400).
-pregunta(20, "", "", 500).
+pregunta(16, "Fue un presidente de los EEUU asesinado en 1963, cuyo hecho se representa en la pelicula JFK", "Hechos Historicos", 100).
+pregunta(17, "Apodo que recibia el Dr. Jack Kevorkian interpretado por Al Pacino en la pelicula You Don't Know Jack", "Hechos Historicos", 200).
+pregunta(18, "Es el actor que interpreta a Oscar Schindler en el dram de WWII Schindler's list", "Hechos Historicos", 300).
+pregunta(19, "Que pelicula del director Steven Spielberg trata el hecho historico conocido como Septiembre Negro", "Hechos Historicos", 400).
+pregunta(20, "Es un personaje real e historico interpretado por Hugh Jackman como Jean ValJean en Los Miserables", "Hechos Historicos", 500).
 
-pregunta(21, "", "", 100).
-pregunta(22, "", "", 200).
-pregunta(23, "", "", 300).
-pregunta(24, "", "", 400).
-pregunta(25, "", "", 500).
+pregunta(21, "Actriz ganadora del oscar como Mejor Actriz por su actuacion en Siempre Alice", "Premios Oscars 2015", 100).
+pregunta(22, "Pelicula ganadora a Mejor Animacion", "Premios Oscars 2015", 200).
+pregunta(23, "", "Premios Oscars 2015", 300).
+pregunta(24, "", "Premios Oscars 2015", 400).
+pregunta(25, "", "Premios Oscars 2015", 500).
 
 % Preguntas
 respuesta(1, "Quien es John Williams").
@@ -54,12 +54,12 @@ respuesta(12, "Que es distopia").
 respuesta(13, "Skynet").
 respuesta(14, "Que es Oblivion").
 respuesta(15, "Lambert Wilson").
-respuesta(16, "").
-respuesta(17, "").
-respuesta(18, "").
-respuesta(19, "").
-respuesta(20, "").
-respuesta(21, "").
+respuesta(16, "Quien fue John F. Kennedy").
+respuesta(17, "Doctor Death").
+respuesta(18, "Quien es Liam Neeson").
+respuesta(19, "Munich").
+respuesta(20, "Quien fue Eugene Vidocq").
+respuesta(21, "Julianne Moore").
 respuesta(22, "").
 respuesta(23, "").
 respuesta(24, "").
@@ -84,6 +84,12 @@ persona_ocupacion("Jim Carrey", "Comediante").
 persona_ocupacion("Jim Carrey", "Actor").
 persona_ocupacion("Arnold Schwarzenegger", "Actor").
 persona_ocupacion("Lambert Wilson", "Actor").
+persona_ocupacion("Hugh Jackman", "Actor").
+persona_ocupacion("Steven Spielberg", "Director").
+persona_ocupacion("Al Pacino", "Actor").
+persona_ocupacion("Liam Neeson", "Actor").
+persona_ocupacion("Andrea Riseborough", "Actriz").
+persona_ocupacion("Julianne Moore", "Actriz").
 
 % Enfermedad
 enfermedad("Alcoholismo").
@@ -94,6 +100,7 @@ padece_de("Charlie Sheen", "Alcoholismo").
 padece_de("Jim Carrey", "Depresion").
 
 % Pelicula
+pelicula("Siempre Alice").
 pelicula("Star Wars Episode I: The Phantom Menace").
 pelicula("Star Wars Episode II: Attack of the Clones").
 pelicula("Star Wars Episode III: Revenge of the Sith").
@@ -147,6 +154,11 @@ pelicula("Interestellar").
 pelicula("Mad Max").
 pelicula("Terminator").
 pelicula("Oblivion").
+pelicula("Los Miserables").
+pelicula("Schindler's list").
+pelicula("Munich").
+pelicula("You Don't Know Jack").
+pelicula("Big Hero 6").
 
 cancion("Everything is Awesome").
 cancion("Grateful").
@@ -205,6 +217,10 @@ compositor_de("Rita Ora", "Grateful").
 compositor_de("Glen Campbell", "I'm not gonna miss you").
 compositor_de("Adam Levin", "Lost Stars").
 
+director_de("Christopher Nolan", "Interestellar").
+director_de("Christopher Nolan", "Inception").
+director_de("Steven Spielberg", "Munich").
+
 interpretar_en("Will Smith", "Detective Mike Lowrey", "Bad Boys").
 interpretar_en("Will Smith", "Agente J", "Hombres de negro").
 interpretar_en("Will Smith", "Chris Gardner", "En busca de la felicidad").
@@ -215,10 +231,20 @@ interpretar_en("Michael Caine", "Alfred", "Batman: El Caballero de la Noche").
 interpretar_en("Arnold Schwarzenegger", "T-800 Modelo 101", "Terminator").
 interpretar_en("Andrea Riseborough", "Vika Olsen", "Oblivion").
 interpretar_en("Lambert Wilson", "Merovingio", "Matrix").
+interpretar_en("Hugh Jackman", "Jean ValJean", "Los Miserables").
+interpretar_en("Liam Neeson", "Oscar Schindler", "Schindler's List").
+interpretar_en("Al Pacino", "Jack Kevorkian", "You Don't Know Jack").
+interpretar_en("Julianne Moore", "Alice Howland", "Siempre Alice").
+
+personaje_historico("Eugene Vidocq", "Jean ValJean").
 
 superheroe("Birdman").
 superheroe("Batman").
 villano("Skynet").
 
+pelicula_animada("Big Hero 6").
+
 % Ganadore(s) de Oscar
 ganador_oscar("Glory", 2015).
+ganador_oscar("Julianne Moore", 2015).
+ganador_oscar("Big Hero 6", 2015).
