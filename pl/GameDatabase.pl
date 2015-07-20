@@ -7,7 +7,7 @@ categoria("Premios Oscars 2015", "Los ganadores de los Oscars del 2015").
 
 % Preguntas.
 %% Preguntas relacionadas a la categoría de Bandas Sonoras.
-pregunta(1, "Es un compositor famoso de las peliculas Star Wars, Harry Potter y Jaws", "Bandas Sonoras", 100).
+pregunta(1, "Es un compositor famoso de las peliculas como Star Wars, Harry Potter y Jaws", "Bandas Sonoras", 100).
 pregunta(2, "Cancion utilizada por Rocky Balboa en sus entrenamientos en la saga completa", "Bandas Sonoras", 200).
 pregunta(3, "Es el compositor que gano mejor cancion en los Oscar en el 2015", "Bandas Sonoras", 300).
 pregunta(4, "Cancion utilizada en Inception para despertar a los personajes", "Bandas Sonoras", 400).
@@ -41,24 +41,24 @@ pregunta(25, "Director de la Pelicula Birdman", "Premios Oscars 2015", 500).
 % Preguntas
 respuesta(1, "Quien es John Williams").
 respuesta(2, "Gonna Fly Now").
-respuesta(3, "Quien es John Legend").
+respuesta(3, "John Legend").
 respuesta(4, "Non Je Ne Regrette Rien").
-respuesta(5, "Que es el El grito de Wilhem").
+respuesta(5, "El grito de Wilhem").
 respuesta(6, "Alcoholismo").
-respuesta(7, "Quien es Will Smith").
-respuesta(8, "Quien es Birdman").
+respuesta(7, "Will Smith").
+respuesta(8, "Birdman").
 respuesta(9, "Michael Caine").
 respuesta(10, "Depresion").
 respuesta(11, "Christopher Nolan").
-respuesta(12, "Que es distopia").
+respuesta(12, "Distopia").
 respuesta(13, "Skynet").
-respuesta(14, "Que es Oblivion").
+respuesta(14, "Oblivion").
 respuesta(15, "Lambert Wilson").
-respuesta(16, "Quien fue John F. Kennedy").
+respuesta(16, "John F. Kennedy").
 respuesta(17, "Doctor Death").
-respuesta(18, "Quien es Liam Neeson").
+respuesta(18, "Liam Neeson").
 respuesta(19, "Munich").
-respuesta(20, "Quien fue Eugene Vidocq").
+respuesta(20, "Eugene Vidocq").
 respuesta(21, "Julianne Moore").
 respuesta(22, "Big Hero 6").
 respuesta(23, "Anna Pinnock").
@@ -262,6 +262,10 @@ interpretar_en("Sylvester Stallone", "Rocky Balboa", "Rocky IV").
 interpretar_en("Sylvester Stallone", "Rocky Balboa", "Rocky V").
 interpretar_en("Sylvester Stallone", "Rocky Balboa", "Rocky VI").
 interpretar_en("Sylvester Stallone", "Rocky Balboa", "Rocky - Creed").
+interpretar_en(" Kevin Costner", "JFK", "JFK").
+
+personaje_nombre_popular("Dr. Jack Kevorkian", "Doctor Death").
+personaje_nombre_popular("John F. Kennedy", "JFK").
 
 productor_area_de("Anna Pinnock", "Decoracion", "El Gran Hotel Budapest").
 

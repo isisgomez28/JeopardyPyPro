@@ -30,6 +30,10 @@ pregunta_14(X):- T="Olvido", pelicula_tematica(P, T), X = P, !.
 
 pregunta_15(X):- P ="Matrix", I= "Merovingio", pelicula(P), interpretar_en(Persona, I, P), persona_ocupacion(Persona, "Actor"), X = Persona, !.
 
+pregunta_16(X):- P="JFK", interpretar_en(_, I, P), personaje_nombre_popular(N, I), X = N.
+
+pregunta_17(X):- I="Dr. Jack Kevorkian", personaje_nombre_popular(I, X), !.
+
 pregunta_18(X):- P ="Schindler's List", I= "Oscar Schindler", pelicula(P), interpretar_en(Persona, I, P), persona_ocupacion(Persona, "Actor"), X = Persona, !.
 
 pregunta_19(X):- T="Septiembre Negro", D="Steven Spielberg", pelicula_tematica(P, T), director_de(D, P), P = X, !.
