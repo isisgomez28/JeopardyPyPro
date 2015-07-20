@@ -41,7 +41,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
-        MainWindow.resize(800, 775)
+        MainWindow.resize(800, 685)
 
         self.centralwidget = QtGui.QWidget(MainWindow)
         self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
@@ -78,7 +78,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
         for i in range(0, 5):
             self.categoryWidgets.append({})
             self.categoryWidgets[i]["verticalLayoutWidget"] = QtGui.QWidget(self.centralwidget)
-            self.categoryWidgets[i]["verticalLayoutWidget"].setGeometry(QtCore.QRect(10+(150*i), 30, 161, 641))
+            self.categoryWidgets[i]["verticalLayoutWidget"].setGeometry(QtCore.QRect(10+(150*i), 10, 161, 591))
             self.categoryWidgets[i]["verticalLayoutWidget"].setObjectName(_fromUtf8("verticalLayoutWidget"))
             self.categoryWidgets[i]["verticalLayout"] = QtGui.QVBoxLayout(self.categoryWidgets[i]["verticalLayoutWidget"])
             self.categoryWidgets[i]["verticalLayout"].setObjectName(_fromUtf8("verticalLayout"))
@@ -105,7 +105,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
 
     def setupScoreBoard(self):
         self.formLayoutWidget = QtGui.QWidget(self.centralwidget)
-        self.formLayoutWidget.setGeometry(QtCore.QRect(290, 690, 231, 91))
+        self.formLayoutWidget.setGeometry(QtCore.QRect(290, 600, 231, 91))
         self.formLayoutWidget.setObjectName(_fromUtf8("formLayoutWidget"))
         self.formLayout = QtGui.QFormLayout(self.formLayoutWidget)
         self.formLayout.setFieldGrowthPolicy(QtGui.QFormLayout.FieldsStayAtSizeHint)
