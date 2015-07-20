@@ -181,7 +181,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
         pregunta = self.model.categorias[categoryNum].preguntas[precio]
         respuesta = self.model.categorias[categoryNum].respuestas[precio]
 
-        questionDialog = QuestionDialog(self, pregunta, respuesta, categoryNum+questionNum+2)
+        questionDialog = QuestionDialog(self, self.model.prolog, pregunta, respuesta, categoryNum+questionNum+1)
         questionDialog.exec_()
 
         # Disable Question

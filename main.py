@@ -14,6 +14,7 @@ if __name__ == "__main__":
 
     # Obtener data de BD de Prolog
     gameModel = GameModel()
+    gameModel.prolog = game.prolog
     for categoria in categorias:
         gameModel.addCategoria(CategoryModel(categoria["Categoria"], 100, 100))
 
