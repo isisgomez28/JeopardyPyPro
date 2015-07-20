@@ -7,6 +7,7 @@ class QuestionDialog(QtGui.QDialog):
     def __init__(self, parent, pregunta, respuesta):
         super(QuestionDialog, self).__init__(parent)
         self.respuesta = respuesta.lower()
+        print self.respuesta
         #self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
 
         #self.buttonBox = QtGui.QDialogButtonBox(self)
@@ -21,7 +22,7 @@ class QuestionDialog(QtGui.QDialog):
         self.textBrowser.setStyleSheet('background-color: blue; color: white')
         self.textBrowser.setText(pregunta)
 
-        self.respuestaTimer = TimerWidget(40, self)
+        self.respuestaTimer = TimerWidget(30, self)
         self.respuestaTimer.timeout.connect(self.respuestaTimerTimedOut)
         self.respuestaTimer.show()
 
@@ -33,23 +34,32 @@ class QuestionDialog(QtGui.QDialog):
         self.respuestaPor = None
         self.malaRespuesta = []
         self.respondiendo = False
+        self.respuestaTimedOut = False
 
     def respuestaTimerTimedOut(self):
+        self.respuestaTimedOut = True
         if not self.respondiendo:
             self.accept()
 
 
     @pyqtSlot()
     def btnRespuestaClicked(self):
+        self.respondiendo = True
         responseDialog = ResponseDialog(self)
-        responseDialog.exec_()
-            #text, ok = QtGui.QInputDialog.getText(self, 'Respuesta',
-                #'Entre su respuesta:')
+        self.btnRespuesta.setEnabled(False)
+        status = responseDialog.exec_()
 
-            #if ok:
-                #if self.respuesta == str(text).lower():
-                    #self.ganador = 'jugador'
-                    #self.accept()
-                #else:
-                    #self.btnRespuesta.setEnabled(False)
+        if status == QDialog.Accepted:
+            print 'accepted'
+            print responseDialog.respuesta.text()
+            if self.respuesta == str(responseDialog.respuesta.text()).lower():
+                print 'gana jugador'
+                self.ganador = 'jugador'
+                self.accept()
+        else:
+            print 'rejected'
+            self.malaRespuesta.append('jugador')
 
+        self.respondiendo = False
+        if self.respuestaTimedOut:
+            self.accept()

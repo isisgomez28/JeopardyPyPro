@@ -8,11 +8,14 @@ class ResponseDialog(QtGui.QDialog):
 
         self.buttonBox = QtGui.QDialogButtonBox(self)
         self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
-        self.buttonBox.setStandardButtons(QtGui.QDialogButtonBox.Cancel|QtGui.QDialogButtonBox.Ok)
-
+        #self.buttonBox.setStandardButtons(QtGui.QDialogButtonBox.Cancel|QtGui.QDialogButtonBox.Ok)
+        self.buttonBox.addButton(QPushButton("Responder", self.buttonBox), QDialogButtonBox.AcceptRole)
+        self.buttonBox.addButton(QPushButton("Desertar", self.buttonBox), QDialogButtonBox.RejectRole)
+        self.buttonBox.accepted.connect(self.accepted)
+        self.buttonBox.rejected.connect(self.rejected)
         self.respuesta = QtGui.QLineEdit(self)
 
-        self.respuestaTimer = TimerWidget(40, self)
+        self.respuestaTimer = TimerWidget(10, self)
         self.respuestaTimer.timeout.connect(self.respuestaTimerTimedOut)
         self.respuestaTimer.show()
 
@@ -23,6 +26,12 @@ class ResponseDialog(QtGui.QDialog):
         self.setWindowTitle('Respuesta')
 
     def respuestaTimerTimedOut(self):
-        if not self.respondiendo:
-            self.cancel()
+        self.reject()
+
+    def accepted(self):
+        self.accept()
+
+    def rejected(self):
+        self.reject()
+
 
