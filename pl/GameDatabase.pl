@@ -39,7 +39,7 @@ pregunta(24, "Es una pelicula dirigida por Pawel Pawlikowski, fue ganadora del O
 pregunta(25, "Director de la Pelicula Birdman", "Premios Oscars 2015", 500).
 
 % Preguntas
-respuesta(1, "Quien es John Williams").
+respuesta(1, "John Williams").
 respuesta(2, "Gonna Fly Now").
 respuesta(3, "John Legend").
 respuesta(4, "Non Je Ne Regrette Rien").
@@ -50,13 +50,13 @@ respuesta(8, "Birdman").
 respuesta(9, "Michael Caine").
 respuesta(10, "Depresion").
 respuesta(11, "Christopher Nolan").
-respuesta(12, "Que es Distopia").
-respuesta(13, "Quien es Skynet").
+respuesta(12, "Distopia").
+respuesta(13, "Skynet").
 respuesta(14, "Oblivion").
 respuesta(15, "Lambert Wilson").
 respuesta(16, "John F. Kennedy").
 respuesta(17, "Doctor Death").
-respuesta(18, "Quien es Liam Neeson").
+respuesta(18, "Liam Neeson").
 respuesta(19, "Munich").
 respuesta(20, "Eugene Vidocq").
 respuesta(21, "Julianne Moore").

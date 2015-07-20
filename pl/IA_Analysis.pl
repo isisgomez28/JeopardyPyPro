@@ -2,7 +2,7 @@
 
 concatena_str(X, Y, R):- string_concat(X, Y, FinalString), R = FinalString.
 
-pregunta_1(X):- persona_ocupacion(Z, "Compositor"), pelicula(P), compositor_de(Z, P), concatena_str("Quien es ", Z, X), !.
+pregunta_1(X):- persona_ocupacion(Z, "Compositor"), pelicula(P), compositor_de(Z, P), X = Z, !.
 
 pregunta_2(X):- interpretar_en(_, "Rocky Balboa", P), cancion_pelicula_accion(Y, P, "Entrenar"), X = Y, !.
 
@@ -25,9 +25,9 @@ pregunta_10(X):- A = "Jim Carrey", persona_ocupacion(A, "Actor"), padece_de(A, E
 
 pregunta_11(X):- P ="Interestellar", pelicula(P), director_de(Dir, P), X = Dir, !.
 
-pregunta_12(X):- P= "Mad Max", pelicula_tematica(P, T), concatena_str("Que es ", T, X), !.
+pregunta_12(X):- P= "Mad Max", pelicula_tematica(P, T), X= T, !.
 
-pregunta_13(X):- P="Terminator",pelicula(P), villano_pelicula(V, P), concatena_str("Quien es ", V, X), !.
+pregunta_13(X):- P="Terminator",pelicula(P), villano_pelicula(V, P), X = V, !.
 
 pregunta_14(X):- T="Olvido", pelicula_tematica(P, T), X = P, !.
 
@@ -37,7 +37,7 @@ pregunta_16(X):- P="JFK", interpretar_en(_, I, P), personaje_nombre_popular(N, I
 
 pregunta_17(X):- I="Dr. Jack Kevorkian", personaje_nombre_popular(I, X), !.
 
-pregunta_18(X):- P ="Schindler's List", I= "Oscar Schindler", pelicula(P), interpretar_en(Persona, I, P), persona_ocupacion(Persona, "Actor"), concatena_str("Quien es ", Persona, X), !.
+pregunta_18(X):- P ="Schindler's List", I= "Oscar Schindler", pelicula(P), interpretar_en(Persona, I, P), persona_ocupacion(Persona, "Actor"), X = Persona, !.
 
 pregunta_19(X):- T="Septiembre Negro", D="Steven Spielberg", pelicula_tematica(P, T), director_de(D, P), P = X, !.
 
