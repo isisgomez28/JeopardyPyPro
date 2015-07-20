@@ -29,11 +29,15 @@ except AttributeError:
 
 
 class Ui_MainWindow(QtGui.QMainWindow):
+    questionSelected = pyqtSignal(object, object)
+
     def __init__(self):
         QtGui.QWidget.__init__(self)
         self.categoryWidgets = []
 
         self.setupUi(self)
+        self.questionSelected.connect(self.onQuestionSelected)
+        self.remainingQuestions = 0
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
@@ -177,16 +181,18 @@ class Ui_MainWindow(QtGui.QMainWindow):
             self.categoryWidgets[categoryNum]["buttons"][(k-1)/100].setText('$' + repr(k))
 
     def onQuestionSelected(self, categoryNum, questionNum):
+        # Disable Question
+        self.categoryWidgets[categoryNum]["buttons"][questionNum].setEnabled(False)
+        self.categoryWidgets[categoryNum]["buttons"][questionNum].setStyleSheet('background-color: gray')
+
+        print 'categoryNum: ' + repr(categoryNum) + ', questionNum: ' + repr(questionNum)
         precio = (questionNum+1)*100
         pregunta = self.model.categorias[categoryNum].preguntas[precio]
         respuesta = self.model.categorias[categoryNum].respuestas[precio]
 
-        questionDialog = QuestionDialog(self, self.model.prolog, pregunta, respuesta, categoryNum+questionNum+1)
+        questionDialog = QuestionDialog(self, self.model.prolog, pregunta, respuesta, (categoryNum*5)+questionNum+1)
         questionDialog.exec_()
 
-        # Disable Question
-        self.categoryWidgets[categoryNum]["buttons"][questionNum].setEnabled(False)
-        self.categoryWidgets[categoryNum]["buttons"][questionNum].setStyleSheet('background-color: gray')
 
         # Update scoreboard
         for i in questionDialog.malaRespuesta:
@@ -196,6 +202,37 @@ class Ui_MainWindow(QtGui.QMainWindow):
             self.model.puntos[questionDialog.ganador] += precio
 
         self.displayScore()
+
+        self.remainingQuestions -= 1
+        ganador = ''
+        if not self.remainingQuestions:
+            ganador = 'La maquina' if model.puntos['maquina'] > model.puntos['jugador'] else 'Usted'
+            QMessageBox.information(self, 'Se ha terminado el juego', + 'Se ha terminado el juego!\n' + ganador + ' es el ganador', QMessageBox.Ok)
+            return
+
+        if questionDialog.ganador == 'maquina':
+            # strategy: Attempt to finish cateogyr, if not, loop categories
+            j = 0
+            for btn in self.categoryWidgets[categoryNum]["buttons"]:
+                if btn.isEnabled():
+                    self.questionSelected.emit(categoryNum,j)
+                    return
+                j += 1
+
+            print 'no encontro en esta categoria...buscando en otra'
+
+            for i in range(0, 5):
+                print 'categoria ' + repr(i)
+                if i == categoryNum:
+                    continue
+                for j in range(0, 5):
+                    print 'pregunta ' + repr(j)
+                    if self.categoryWidgets[i]["buttons"][j]:
+                        self.questionSelected.emit(i,j)
+                        return
+                    j += 1
+                i += 1
+
 
 
 

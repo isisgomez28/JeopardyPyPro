@@ -51,21 +51,27 @@ class QuestionDialog(QtGui.QDialog):
             self.accept()
 
     def performPLQuery(self):
-        self.btnRespuesta.setEnabled(False)
-        self.prolog.consult('pl/IA_Analysis.pl')
-        solucion = [s["X"] for s in self.prolog.query('pregunta_' + repr(self.preguntaNum) + '(X)', maxresult=1)]
-        respuesta = solucion[0]
+        while (self.respondiendo):
+            QTimer.singleShot(500, self.performPLQuery)
+            return
 
-        print 'plSolver respuesta: ' + respuesta
+        if not self.respuestaTimedOut and self.ganador is None:
+            self.btnRespuesta.setEnabled(False)
+            self.prolog.consult('pl/IA_Analysis.pl')
+            print 'preguntaNum: ' + repr(self.preguntaNum)
+            solucion = [s["X"] for s in self.prolog.query('pregunta_' + repr(self.preguntaNum) + '(X)', maxresult=1)]
+            respuesta = solucion[0]
 
-        if self.respuesta == respuesta.lower():
-            self.ganador = 'maquina'
-            QMessageBox.warning(self, 'Respuesta Acertada por Maquina', 'Respuesta Acertada por Maquina:\n' + respuesta, QMessageBox.Ok)
-            self.accept()
-        else:
-            self.malaRespuesta.append('maquina')
-            QMessageBox.warning(self, 'Respuesta NO Acertada por Maquina', 'Respuesta NO Acertada por Maquina:\n' + respuesta, QMessageBox.Ok)
-            self.btnRespuesta.setEnabled(True)
+            print 'plSolver respuesta: ' + respuesta
+
+            if self.respuesta == respuesta.lower():
+                self.ganador = 'maquina'
+                QMessageBox.warning(self, 'Respuesta Acertada por Maquina', 'Respuesta Acertada por Maquina:\n' + respuesta, QMessageBox.Ok)
+                self.accept()
+            else:
+                self.malaRespuesta.append('maquina')
+                QMessageBox.warning(self, 'Respuesta NO Acertada por Maquina', 'Respuesta NO Acertada por Maquina:\n' + respuesta, QMessageBox.Ok)
+                self.btnRespuesta.setEnabled(True)
 
 
     @pyqtSlot()
