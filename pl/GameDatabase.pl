@@ -17,7 +17,7 @@ pregunta(5, "Efecto de sonido de stock usado por primera vez en 1951 en la pelic
 pregunta(6, "Enfermedad que arruino su carrera de actor a Charlie Sheen", "Actores y Hechos Curiosos", 100).
 pregunta(7, "Es el actor que rechazo interpretar el papel de Neo en la trilogia de Matrix", "Actores y Hechos Curiosos", 200).
 pregunta(8, "Fue el superheroe por el cual Riggan Thomson interpretado por Michael Keaton tuvo delirios durante su vida personal y profesional.", "Actores y Hechos Curiosos" ,300).
-pregunta(9, "Actor que olvido su dialogo con el Guason tras este haber entrado en escena durante una fiesta en Batman: El Caballero de la Noche", "Actores y Hechos Curiosos", 400).
+pregunta(9, "Actor que interpretaba a Alfedolvido su dialogo con el Guason tras este haber entrado en escena durante una fiesta en Batman: El Caballero de la Noche", "Actores y Hechos Curiosos", 400).
 pregunta(10, "Enfermedad que amenazo la vida del comediante y actor Jim Carrey", "Actores y Hechos Curiosos", 500).
 
 pregunta(11, "Es el director de la pelicula Interestellar", "Peliculas Apocalipticas", 100).
@@ -102,7 +102,6 @@ padece_de("Charlie Sheen", "Alcoholismo").
 padece_de("Jim Carrey", "Depresion").
 
 % Pelicula
-pelicula("Siempre Alice").
 pelicula("Star Wars Episode I: The Phantom Menace").
 pelicula("Star Wars Episode II: Attack of the Clones").
 pelicula("Star Wars Episode III: Revenge of the Sith").
@@ -110,6 +109,7 @@ pelicula("Star Wars Episode IV: A New Hope").
 pelicula("Star Wars Episode V: The Empire Strikes Back").
 pelicula("Star Wars Episode VI: Return of the Jedi").
 pelicula("Star Wars Episode VII: The Force Awakens").
+pelicula("Star Wars Episode I: the Phantom Menace").
 pelicula("Harry Potter y la Piedra Filosofal").
 pelicula("Harry Potter y la Camara Secreta").
 pelicula("Harry Potter y el Prisionero de Azkaban").
@@ -119,7 +119,7 @@ pelicula("Harry Potter y el Misterio del Príncipe").
 pelicula("Harry Potter y las Reliquias de la Muerte - Parte 1").
 pelicula("Harry Potter y las Reliquias de la Muerte - Parte 2").
 pelicula("Jaws").
-pelicula("Star Wars Episode I: the Phantom Menace").
+pelicula("Siempre Alice").
 pelicula("Rocky").
 pelicula("Rocky II").
 pelicula("Rocky III").
@@ -163,6 +163,7 @@ pelicula("You Don't Know Jack").
 pelicula("Big Hero 6").
 pelicula("El Gran Hotel Budapest").
 pelicula("Ida").
+pelicula("Matrix").
 
 cancion("Everything is Awesome").
 cancion("Grateful").
@@ -170,6 +171,14 @@ cancion("Everything is Awesome").
 cancion("Glory").
 cancion("I'm not gonna miss you").
 cancion("Lost Stars").
+cancion("Gonna Fly Now").
+cancion("Rocky's reward").
+cancion("Take you back").
+cancion("Eye of the Tiguer").
+cancion("Burning heart").
+cancion("Heart on fire").
+cancion("No easy way out").
+cancion("Non Je Ne Regrette Rien").
 
 efecto_sonido("Castle Thunder", 1931).
 efecto_sonido("Howie Scream", 1980).
@@ -237,10 +246,12 @@ interpretar_en("Michael Caine", "Alfred", "Batman: El Caballero de la Noche").
 interpretar_en("Arnold Schwarzenegger", "T-800 Modelo 101", "Terminator").
 interpretar_en("Andrea Riseborough", "Vika Olsen", "Oblivion").
 interpretar_en("Lambert Wilson", "Merovingio", "Matrix").
+interpretar_en("Keanu Reeves", "Neo", "Matrix").
 interpretar_en("Hugh Jackman", "Jean ValJean", "Los Miserables").
 interpretar_en("Liam Neeson", "Oscar Schindler", "Schindler's List").
 interpretar_en("Al Pacino", "Jack Kevorkian", "You Don't Know Jack").
 interpretar_en("Julianne Moore", "Alice Howland", "Siempre Alice").
+interpretar_en("Michael Caine" ,"Alfred", "Batman: El Caballero de la Noche").
 
 productor_area_de("Anna Pinnock", "Decoracion", "El Gran Hotel Budapest").
 
