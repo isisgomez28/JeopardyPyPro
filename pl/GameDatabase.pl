@@ -17,7 +17,7 @@ pregunta(5, "Efecto de sonido de stock usado por primera vez en 1951 en la pelic
 pregunta(6, "Enfermedad que arruino su carrera de actor a Charlie Sheen", "Actores y Hechos Curiosos", 100).
 pregunta(7, "Es el actor que rechazo interpretar el papel de Neo en la trilogia de Matrix", "Actores y Hechos Curiosos", 200).
 pregunta(8, "Fue el superheroe por el cual Riggan Thomson interpretado por Michael Keaton tuvo delirios durante su vida personal y profesional.", "Actores y Hechos Curiosos" ,300).
-pregunta(9, "Actor que interpretaba a Alfedolvido su dialogo con el Guason tras este haber entrado en escena durante una fiesta en Batman: El Caballero de la Noche", "Actores y Hechos Curiosos", 400).
+pregunta(9, "Actor que interpretaba a Alfed olvido su dialogo con el Guason tras este haber entrado en escena durante una fiesta en Batman: El Caballero de la Noche", "Actores y Hechos Curiosos", 400).
 pregunta(10, "Enfermedad que amenazo la vida del comediante y actor Jim Carrey", "Actores y Hechos Curiosos", 500).
 
 pregunta(11, "Es el director de la pelicula Interestellar", "Peliculas Apocalipticas", 100).
@@ -28,7 +28,7 @@ pregunta(15, "Es el actor que interpreta el personaje de Merovingio en Matrix", 
 
 pregunta(16, "Fue un presidente de los EEUU asesinado en 1963, cuyo hecho se representa en la pelicula JFK", "Hechos Historicos", 100).
 pregunta(17, "Apodo que recibia el Dr. Jack Kevorkian interpretado por Al Pacino en la pelicula You Don't Know Jack", "Hechos Historicos", 200).
-pregunta(18, "Es el actor que interpreta a Oscar Schindler en el dram de WWII Schindler's list", "Hechos Historicos", 300).
+pregunta(18, "Es el actor que interpreta a Oscar Schindler en el dram de WWII Schindler's List", "Hechos Historicos", 300).
 pregunta(19, "Que pelicula del director Steven Spielberg trata el hecho historico conocido como Septiembre Negro", "Hechos Historicos", 400).
 pregunta(20, "Es un personaje real e historico interpretado por Hugh Jackman como Jean ValJean en Los Miserables", "Hechos Historicos", 500).
 
@@ -92,6 +92,7 @@ persona_ocupacion("Julianne Moore", "Actriz").
 persona_ocupacion("Anna Pinnock", "Ambientador de Decoracion").
 persona_ocupacion("Pawel Pawlikowski", "Director").
 persona_ocupacion("Alejandro Gonzalez", "Director").
+persona_ocupacion("Sylvester Stallone", "Actor").
 
 % Enfermedad
 enfermedad("Alcoholismo").
@@ -157,13 +158,14 @@ pelicula("Mad Max").
 pelicula("Terminator").
 pelicula("Oblivion").
 pelicula("Los Miserables").
-pelicula("Schindler's list").
+pelicula("Schindler's List").
 pelicula("Munich").
 pelicula("You Don't Know Jack").
 pelicula("Big Hero 6").
 pelicula("El Gran Hotel Budapest").
 pelicula("Ida").
 pelicula("Matrix").
+pelicula("JFK").
 
 cancion("Everything is Awesome").
 cancion("Grateful").
@@ -208,13 +210,13 @@ cancion_pelicula_accion("Non Je Ne Regrette Rien", "Inception", "Despertar").
 utilizado_en("El grito de Wilhem", "Distant Drums").
 
 % Trabajos realizados.
-compositor_de("John Williams", "Star Wars Episode I: the Phantom Menace").
+compositor_de("John Williams", "Star Wars Episode I: The Phantom Menace").
 compositor_de("John Williams", "Star Wars Episode II: Attack of the Clones").
 compositor_de("John Williams", "Star Wars Episode III: Revenge of the Sith").
 compositor_de("John Williams", "Star Wars Episode IV: A New Hope").
 compositor_de("John Williams", "Star Wars Episode V: The Empire Strikes Back").
-compositor_de("John Williams", "Star Wars Episode VI - Return of the Jedi").
-compositor_de("John Williams", "Star Wars Episode VII - The Force Awakens").
+compositor_de("John Williams", "Star Wars Episode VI: Return of the Jedi").
+compositor_de("John Williams", "Star Wars Episode VII: The Force Awakens").
 compositor_de("John Williams", "Harry Potter y la Piedra Filosofal").
 compositor_de("John Williams", "Harry Potter y la Camara Secreta").
 compositor_de("John Williams", "Harry Potter y el Prisionero de Azkaban").
@@ -252,20 +254,33 @@ interpretar_en("Liam Neeson", "Oscar Schindler", "Schindler's List").
 interpretar_en("Al Pacino", "Jack Kevorkian", "You Don't Know Jack").
 interpretar_en("Julianne Moore", "Alice Howland", "Siempre Alice").
 interpretar_en("Michael Caine" ,"Alfred", "Batman: El Caballero de la Noche").
+interpretar_en("Sylvester Stallone", "Rocky Balboa", "Rocky").
+interpretar_en("Sylvester Stallone", "Rocky Balboa", "Rocky I").
+interpretar_en("Sylvester Stallone", "Rocky Balboa", "Rocky II").
+interpretar_en("Sylvester Stallone", "Rocky Balboa", "Rocky III").
+interpretar_en("Sylvester Stallone", "Rocky Balboa", "Rocky IV").
+interpretar_en("Sylvester Stallone", "Rocky Balboa", "Rocky V").
+interpretar_en("Sylvester Stallone", "Rocky Balboa", "Rocky VI").
+interpretar_en("Sylvester Stallone", "Rocky Balboa", "Rocky - Creed").
 
 productor_area_de("Anna Pinnock", "Decoracion", "El Gran Hotel Budapest").
 
 personaje_historico("Eugene Vidocq", "Jean ValJean").
 
-superheroe("Birdman").
-superheroe("Batman").
-villano("Skynet").
+superheroe_pelicula("Birdman", "Birdman").
+superheroe_pelicula("Batman", "Batman Returns").
+superheroe_pelicula("Batman", "Batman").
+superheroe_pelicula("Batman", "Batman: El Caballero de la Noche").
+villano_pelicula("Skynet", "Terminator").
 
 pelicula_animada("Big Hero 6").
 pelicula_extranjera("Ida").
 
 % Pelicula y tematica
 pelicula_tematica("Mad Max", "Distopia").
+pelicula_tematica("Oblivion", "Olvido").
+pelicula_tematica("Munich", "Septiembre Negro").
+pelicula_tematica("JFK", "Asesinato de JFK").
 
 % Ganadore(s) de Oscar
 ganador_oscar("Glory", 2015).
