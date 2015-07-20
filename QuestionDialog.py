@@ -71,7 +71,10 @@ class QuestionDialog(QtGui.QDialog):
             else:
                 self.malaRespuesta.append('maquina')
                 QMessageBox.warning(self, 'Respuesta NO Acertada por Maquina', 'Respuesta NO Acertada por Maquina:\n' + respuesta, QMessageBox.Ok)
-                self.btnRespuesta.setEnabled(True)
+                if len(self.malaRespuesta) > 1:
+                    self.accept()
+                else:
+                    self.btnRespuesta.setEnabled(True)
 
 
     @pyqtSlot()
@@ -87,11 +90,18 @@ class QuestionDialog(QtGui.QDialog):
             if self.respuesta == str(responseDialog.respuesta.text()).lower():
                 print 'gana jugador'
                 self.ganador = 'jugador'
+                QMessageBox.warning(self, 'Respuesta Acertada por Usted', 'Respuesta Acertada por Usted:\n' + str(responseDialog.respuesta.text()), QMessageBox.Ok)
                 self.accept()
+            else:
+                self.malaRespuesta.append('jugador')
+
         else:
             print 'rejected'
             self.malaRespuesta.append('jugador')
 
         self.respondiendo = False
+        if len(self.malaRespuesta) > 1:
+            self.accept()
+
         if self.respuestaTimedOut:
             self.accept()
