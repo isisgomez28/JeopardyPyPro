@@ -1,5 +1,6 @@
 from PyQt4 import QtCore, QtGui
 from PyQt4.QtCore import *
+from TimerWidget import *
 
 class QuestionDialog(QtGui.QDialog):
     def __init__(self, parent, pregunta, respuesta):
@@ -19,11 +20,23 @@ class QuestionDialog(QtGui.QDialog):
         self.textBrowser.setStyleSheet('background-color: blue; color: white')
         self.textBrowser.setText(pregunta)
 
+        self.respuestaTimer = TimerWidget(40, 'Timeout Ambos Jugadores', self)
+        self.respuestaTimer.timeout.connect(self.respuestaTimerTimedOut)
+        self.respuestaTimer.show()
+
         self.verticalLayout = QtGui.QVBoxLayout(self)
         self.verticalLayout.addWidget(self.textBrowser)
-        #self.verticalLayout.addWidget(self.buttonBox)
+        self.verticalLayout.addWidget(self.respuestaTimer)
         self.verticalLayout.addWidget(self.btnRespuesta)
-        self.ganador = None
+
+        self.respuestaPor = None
+        self.malaRespuesta = []
+        self.respondiendo = False
+
+    def respuestaTimerTimedOut(self):
+        if not self.respondiendo:
+            self.accept()
+
 
     @pyqtSlot()
     def btnRespuestaClicked(self):

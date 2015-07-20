@@ -23,7 +23,10 @@ if __name__ == "__main__":
 
     for respuesta in respuestas:
         i = int((respuesta["Numero"]-1) / 5)
-        gameModel.categorias[i].setRespuesta((i+1)*100, respuesta["Respuesta"])
+        j = respuesta["Numero"] % 5
+        j = j if j else 5
+        j *= 100
+        gameModel.categorias[i].setRespuesta(j, respuesta["Respuesta"])
 
     ex.setModel(gameModel)
 
