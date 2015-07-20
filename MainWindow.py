@@ -144,12 +144,15 @@ class Ui_MainWindow(QtGui.QMainWindow):
         palette = self.lcdNumber_Jugador.palette()
         palette.setColor(self.lcdNumber_Jugador.foregroundRole(), QColor('yellow'))
         self.lcdNumber_Jugador.setPalette(palette)
-        self.lcdNumber_Jugador.display(100)
 
         palette = self.lcdNumber_Computador.palette()
         palette.setColor(self.lcdNumber_Computador.foregroundRole(), QColor('yellow'))
         self.lcdNumber_Computador.setPalette(palette)
-        self.lcdNumber_Computador.display(800)
+
+
+    def displayScore(self):
+        self.lcdNumber_Jugador.display(self.model.puntos['jugador'])
+        self.lcdNumber_Computador.display(self.model.puntos['maquina'])
 
 
     def retranslateUi(self, MainWindow):
@@ -160,6 +163,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
     def setModel(self, gameModel):
         self.model = gameModel
         self.setCategories()
+        self.displayScore()
 
     def setCategories(self):
         i = 0
@@ -177,8 +181,21 @@ class Ui_MainWindow(QtGui.QMainWindow):
         pregunta = self.model.categorias[categoryNum].preguntas[precio]
         respuesta = self.model.categorias[categoryNum].respuestas[precio]
 
-        questionDialog = QuestionDialog(self, pregunta, respuesta)
+        questionDialog = QuestionDialog(self, pregunta, respuesta, categoryNum+questionNum+2)
         questionDialog.exec_()
+
+        # Disable Question
         self.categoryWidgets[categoryNum]["buttons"][questionNum].setEnabled(False)
         self.categoryWidgets[categoryNum]["buttons"][questionNum].setStyleSheet('background-color: gray')
+
+        # Update scoreboard
+        for i in questionDialog.malaRespuesta:
+            self.model.puntos[i] -= precio
+
+        if questionDialog.ganador:
+            self.model.puntos[questionDialog.ganador] += precio
+
+        self.displayScore()
+
+
 

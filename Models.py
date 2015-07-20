@@ -17,6 +17,7 @@ class CategoryModel(object):
 class GameModel(object):
     def __init__(self):
         self.categorias = []
+        self.puntos = {'jugador': 0, 'maquina': 0}
 
     def addCategoria(self, categoria):
         self.categorias.append(categoria)

@@ -2,9 +2,10 @@ from PyQt4 import QtCore, QtGui
 from PyQt4.QtCore import *
 from TimerWidget import *
 from ResponseDialog import *
+from PLSolver import *
 
 class QuestionDialog(QtGui.QDialog):
-    def __init__(self, parent, pregunta, respuesta):
+    def __init__(self, parent, pregunta, respuesta, preguntaNum):
         super(QuestionDialog, self).__init__(parent)
         self.respuesta = respuesta.lower()
         print self.respuesta
@@ -31,7 +32,11 @@ class QuestionDialog(QtGui.QDialog):
         self.verticalLayout.addWidget(self.respuestaTimer)
         self.verticalLayout.addWidget(self.btnRespuesta)
 
-        self.respuestaPor = None
+        self.plSolver = PLSolver(preguntaNum, 5)
+        self.plSolver.finished.connect(self.maquinaResponded)
+        self.plSolver.start()
+
+        self.ganador = None
         self.malaRespuesta = []
         self.respondiendo = False
         self.respuestaTimedOut = False
@@ -40,6 +45,19 @@ class QuestionDialog(QtGui.QDialog):
         self.respuestaTimedOut = True
         if not self.respondiendo:
             self.accept()
+
+    def maquinaResponded(self):
+        print 'plSolver respuesta: ' + self.plSolver.respuesta
+
+        self.btnRespuesta.setEnabled(False)
+        if self.respuesta == self.plSolver.respuesta.lower():
+            self.ganador = 'maquina'
+            QMessageBox.warning(self, 'Respuesta Acertada por Maquina', 'Respuesta Acertada por Maquina:\n' + self.respuesta, QMessageBox.Ok)
+            self.accept()
+        else:
+            self.malaRespuesta.append('maquina')
+            QMessageBox.warning(self, 'Respuesta NO Acertada por Maquina', 'Respuesta NO Acertada por Maquina:\n' + self.respuesta, QMessageBox.Ok)
+            self.btnRespuesta.setEnabled(True)
 
 
     @pyqtSlot()
