@@ -6,7 +6,7 @@ from PyQt4.QtGui import *
 class TimerWidget(QtGui.QLCDNumber):
     timeout = pyqtSignal()
 
-    def __init__(self, duration, title, parent=0):
+    def __init__(self, duration, parent=None):
         super(TimerWidget, self).__init__(parent)
         self.timeLeft = duration
         self.setSegmentStyle(QtGui.QLCDNumber.Flat)
@@ -16,8 +16,7 @@ class TimerWidget(QtGui.QLCDNumber):
         self.timer.timeout.connect(self.showTimeLeft)
         self.timer.start(1000)
 
-        self.setWindowTitle(title)
-        self.resize(160, 60)
+        self.resize(300, 60)
         self.showTimeLeft()
 
     @pyqtSlot()

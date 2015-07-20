@@ -176,6 +176,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
         precio = (questionNum+1)*100
         pregunta = self.model.categorias[categoryNum].preguntas[precio]
         respuesta = self.model.categorias[categoryNum].respuestas[precio]
+
         questionDialog = QuestionDialog(self, pregunta, respuesta)
         questionDialog.exec_()
         self.categoryWidgets[categoryNum]["buttons"][questionNum].setEnabled(False)
