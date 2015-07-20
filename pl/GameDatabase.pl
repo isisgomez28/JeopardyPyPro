@@ -1,6 +1,6 @@
 %	Categorias
 categoria("Bandas Sonoras", "Musica en las peliculas.").
-categoria("Actores y Hechos Curiosos", "Actores fuera de las peliculas.").
+categoria("Actores y \nHechos Curiosos", "Actores fuera de las peliculas.").
 categoria("Peliculas Apocalipticas","Peliculas que han mostrado teorias y pinceladas acerca del fin de la humanidad.").
 categoria("Hechos Historicos", "Hechos historicos que han invadido la pantalla gigante.").
 categoria("Premios Oscars 2015", "Los ganadores de los Oscars del 2015").

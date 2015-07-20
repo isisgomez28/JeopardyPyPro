@@ -41,7 +41,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName(_fromUtf8("MainWindow"))
-        MainWindow.resize(1375, 827)
+        MainWindow.resize(800, 775)
 
         self.centralwidget = QtGui.QWidget(MainWindow)
         self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
@@ -58,7 +58,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.formLayoutWidget.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1375, 22))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1175, 22))
         self.menubar.setObjectName(_fromUtf8("menubar"))
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtGui.QStatusBar(MainWindow)
@@ -73,13 +73,12 @@ class Ui_MainWindow(QtGui.QMainWindow):
         self.setPalette(palette)
 
 
-
     def setupButtons(self):
         # Initialize Widgets
         for i in range(0, 5):
             self.categoryWidgets.append({})
             self.categoryWidgets[i]["verticalLayoutWidget"] = QtGui.QWidget(self.centralwidget)
-            self.categoryWidgets[i]["verticalLayoutWidget"].setGeometry(QtCore.QRect(10+(270*i), 30, 261, 641))
+            self.categoryWidgets[i]["verticalLayoutWidget"].setGeometry(QtCore.QRect(10+(150*i), 30, 161, 641))
             self.categoryWidgets[i]["verticalLayoutWidget"].setObjectName(_fromUtf8("verticalLayoutWidget"))
             self.categoryWidgets[i]["verticalLayout"] = QtGui.QVBoxLayout(self.categoryWidgets[i]["verticalLayoutWidget"])
             self.categoryWidgets[i]["verticalLayout"].setObjectName(_fromUtf8("verticalLayout"))
@@ -106,7 +105,7 @@ class Ui_MainWindow(QtGui.QMainWindow):
 
     def setupScoreBoard(self):
         self.formLayoutWidget = QtGui.QWidget(self.centralwidget)
-        self.formLayoutWidget.setGeometry(QtCore.QRect(460, 690, 431, 91))
+        self.formLayoutWidget.setGeometry(QtCore.QRect(290, 690, 231, 91))
         self.formLayoutWidget.setObjectName(_fromUtf8("formLayoutWidget"))
         self.formLayout = QtGui.QFormLayout(self.formLayoutWidget)
         self.formLayout.setFieldGrowthPolicy(QtGui.QFormLayout.FieldsStayAtSizeHint)
